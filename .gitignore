@@ -1,0 +1,5 @@
+# remove o template padrão de artigo
+/resources/template-latex
+
+# remove pdfs
+**/*.pdf

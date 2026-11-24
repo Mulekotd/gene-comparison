@@ -1,0 +1,163 @@
+Assecion Number,GTDB species,NCBI Strain ID,CheckM2 Completeness (%),CheckM2 Contamination (%),Genome Size (bp),GC Percentage (%),Assembly Level,Contig Count,N50 (bp),Genome Category,Coding Density (%),CDS Count,Protein Count,Isolation source,Host,Latitude and Longitude,Country,Release Date,Collection Date,Description,LPSN species validation
+GCF_027474845.2,Maribacter aestuarii,JCM18631,97.57,0.07,3.864.851,39.33,Complete Genome,1,3.864.851,Isolate,90.98,3490.0,3616,sediment,tidal flat sediment,,South Korea: Gwangyang Bay,2023-06-08,2023-06-08,"Reference: Lo N, Jin HM, Jeon CO. Maribacter aestuarii sp. nov., isolated from tidal flat sediment, and an emended description of the genus Maribacter. Int J Syst Evol Microbiol 2013; 63:3409-3414.",Yes - Maribacter aestuarii
+GCF_003933245.1,Maribacter algicola,PoM-212,100.0,0.12,4114314,41.0,Contig,7,2184756,Isolate,91.53,3524.0,3589,,,,South Korea: Incheon,2018-12-10,2018-12-10,,Yes - Maribacter algicola
+GCF_000621125.1,Maribacter antarcticus,DSM 21422,99.99,0.12,4853010,37.43,Scaffold,35,339358,Isolate,85.75,4165.0,4305,,Pyramimos gelidicola,,Southern Ocean,2014-04-08,2014-04-08,,Yes - Maribacter antarcticus
+GCF_947490135.1,Maribacter aquivivus,2B2-70-G.fasta,100.0,0.08,4510051,34.53,Contig,32,520442,Isolate,90.98,3853.0,3894,,,,n/a,2023-01-30,2023-01-30,,Yes - Maribacter aquivivus
+GCF_900142175.1,Maribacter aquivivus,DSM 16478,100.0,0.19,4578396,34.49,Scaffold,16,2373344,Isolate,90.76,3952.0,3990,,,,n/a,2016-12-03,2016-12-03,Keywords: GSC:MIxS;MIGS:6.0,Yes - Maribacter aquivivus
+GCF_947501435.1,Maribacter aquivivus,3-185-3Z.fasta,100.0,0.07,4520649,34.49,Contig,25,501921,Isolate,91.25,3836.0,3870,,,,n/a,2023-01-30,2023-01-30,,Yes - Maribacter aquivivus
+GCF_947494935.1,Maribacter aquivivus,3-2173-3Z.fasta,100.0,0.07,4533860,34.51,Contig,31,475116,Isolate,91.2,3862.0,3907,,,,n/a,2023-01-30,2023-01-30,,Yes - Maribacter aquivivus
+GCF_036964345.1,Maribacter arcticus,2NakV-09,99.99,0.07,3912348,34.91,Scaffold,23,512267,MAG,89.95,3471.0,3521,,,69.03 N 57.36 E,n/a,2024-03-02,2024-03-02,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter arcticus
+GCF_963977255.1,Maribacter arcticus,ERR2762175_binner13_Refined_22,93.31,0.22,3563092,34.76,Contig,378,13658,MAG,90.74,3388.0,3491,,,,n/a,2024-03-10,2024-03-10,,Yes - Maribacter arcticus
+GCF_900167935.1,Maribacter arcticus,DSM 23546,100.0,0.09,4211145,34.99,Scaffold,27,245225,Isolate,89.74,3683.0,3735,,,,n/a,2017-03-08,2017-03-08,Keywords: GSC:MIxS;MIGS:6.0,Yes - Maribacter arcticus
+GCF_036964525.1,Maribacter arcticus,1NakV-05,99.96,0.13,3718200,35.0,Scaffold,156,52790,MAG,89.36,3357.0,3399,,,78.39 N 42.11 E,n/a,2024-03-02,2024-03-02,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter arcticus
+GCF_036964305.1,Maribacter arcticus,3NakV-04,99.98,0.02,3904015,34.89,Scaffold,21,665423,MAG,89.96,3470.0,3532,,,69.03 N 57.36 E,n/a,2024-03-02,2024-03-02,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter arcticus
+GCF_036963745.1,Maribacter arcticus,4NakV-12,99.73,0.4,3740494,35.02,Scaffold,65,156281,MAG,89.95,3350.0,3405,,,69.03 N 57.37 E,n/a,2024-03-02,2024-03-02,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter arcticus
+GCF_036961275.1,Maribacter arcticus,5NakV-14,99.46,0.05,3623319,34.99,Scaffold,89,88237,MAG,89.97,3266.0,3316,,,78.40 N 42.00 E,n/a,2024-03-02,2024-03-02,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter arcticus
+GCF_036960925.1,Maribacter arcticus,6NakV-15,91.61,0.35,3748680,34.96,Scaffold,456,12277,MAG,89.85,3603.0,3720,,,78.39 N 42.11 E,n/a,2024-03-02,2024-03-02,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter arcticus
+GCF_004364175.1,Maribacter caenipelagi,CECT 8455,99.99,0.22,4281860,35.18,Scaffold,26,409143,Isolate,90.58,3745.0,3767,,,,n/a,2019-03-22,2019-03-22,Keywords: GSC:MIxS;MIGS:6.0,Yes - Maribacter caenipelagi
+GCF_002269385.1,Maribacter cobaltidurans,B1,99.89,0.32,4639957,39.73,Complete Genome,1,4639957,Isolate,91.21,4102.0,4188,,,14.72 S 13.46 W,Atlantic Ocean: South Atlantic Ocean,2017-08-24,2017-08-24,Keywords: GSC:MIxS;MIGS:6.0,Yes - Maribacter cobaltidurans
+GCF_014643435.1,Maribacter cobaltidurans,CGMCC 1.15508,99.93,0.21,4568667,39.63,Contig,52,370901,Isolate,91.3,4062.0,4141,,,,n/a,2020-09-12,2020-09-12,Keywords: GSC:MIxS;MIGS:6.0,Yes - Maribacter cobaltidurans
+GCF_039986215.1,Maribacter dokdonensis,LC.02.F.A2_479_55,99.96,2.43,4640379,35.75,Contig,260,31994,MAG,91.92,4055.0,4146,,Macrocystis pyrifera,,n/a,2024-05-31,2024-05-31,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039986575.1,Maribacter dokdonensis,AQ.60.F.B1_47_010,99.88,0.69,4362585,35.91,Contig,199,89855,MAG,91.46,3849.0,3916,,Macrocystis pyrifera,,n/a,2024-05-31,2024-05-31,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039987475.1,Maribacter dokdonensis,CB.05.F.D2_97_46,98.9,2.57,4254096,35.94,Contig,238,28855,MAG,92.06,3771.0,3851,,Macrocystis pyrifera,,n/a,2024-05-31,2024-05-31,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039969775.1,Maribacter dokdonensis,LC.109.F.C4_184_85,99.99,0.09,4352599,35.92,Contig,7,1478825,MAG,92.08,3696.0,3737,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039967835.1,Maribacter dokdonensis,LC.118.F.C4_216_37,99.99,0.08,4324902,35.91,Contig,15,427385,MAG,92.1,3679.0,3721,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039988175.1,Maribacter dokdonensis,AQ.32.F.A2_91_45,97.23,0.07,4179101,36.06,Contig,152,54543,MAG,92.19,3637.0,3698,,Macrocystis pyrifera,,n/a,2024-05-31,2024-05-31,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039967245.1,Maribacter dokdonensis,CB.59.M.B5_223_4,91.59,0.2,4072647,35.9,Contig,636,8628,MAG,92.0,3898.0,4009,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039966915.1,Maribacter dokdonensis,LC.04.F.D4_227_67,99.99,0.07,4329922,35.93,Contig,5,1481973,MAG,92.12,3672.0,3713,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039966215.1,Maribacter dokdonensis,CB.57.F.B3_234_63,99.99,0.09,4355028,35.93,Contig,5,2200101,MAG,92.1,3695.0,3737,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039965315.1,Maribacter dokdonensis,LC.03.F.B2_259_1,100.0,0.09,4352058,35.93,Contig,61,116041,MAG,92.08,3728.0,3780,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039964365.1,Maribacter dokdonensis,LC.105.F.D3_287_94,99.99,0.1,4351424,35.93,Contig,30,270993,MAG,92.12,3703.0,3746,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039988355.1,Maribacter dokdonensis,CI.14.F.D1_90_46,99.99,0.08,4257867,36.06,Contig,108,70071,MAG,92.19,3663.0,3721,,Macrocystis pyrifera,,n/a,2024-05-31,2024-05-31,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039963955.1,Maribacter dokdonensis,LC.173.F.D1_294_74,100.0,0.08,4304509,35.95,Contig,15,440735,MAG,92.19,3647.0,3692,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039963475.1,Maribacter dokdonensis,LC.07.F.D4_302_16,99.99,0.25,4328563,35.93,Contig,72,100339,MAG,92.13,3712.0,3761,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039961025.1,Maribacter dokdonensis,AQ.50.F.D1_171_32,91.87,2.77,4023902,35.87,Contig,432,12724,MAG,91.95,3781.0,3874,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_900105105.1,Maribacter dokdonensis,MAR_2009_60,100.0,0.1,4505800,36.09,Chromosome,1,4505700,Isolate,91.68,3862.0,3910,,,55.0255 N 8.4567 E,n/a,2016-10-21,2016-10-21,Keywords: GSC:MIxS;MIGS:6.0,Yes - Maribacter dokdonensis
+GCF_039946215.1,Maribacter dokdonensis,CB.49.M.B5_130_42,99.99,0.09,4347986,35.92,Contig,20,299359,MAG,92.08,3701.0,3747,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039944815.1,Maribacter dokdonensis,CB.66.F.B1_115_36,99.99,0.08,4330287,35.93,Contig,7,701903,MAG,92.11,3672.0,3713,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_900105545.1,Maribacter dokdonensis,MAR_2009_71,100.0,0.07,4622542,36.07,Contig,2,4614103,Isolate,91.37,3911.0,3955,,,55.0255 N 8.4567 E,n/a,2016-10-22,2016-10-22,Keywords: GSC:MIxS;MIGS:6.0,Yes - Maribacter dokdonensis
+GCF_039944295.1,Maribacter dokdonensis,CB.43.F.B2_119_103,99.99,0.08,4330201,35.93,Contig,5,1481973,MAG,92.12,3672.0,3712,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039943575.1,Maribacter dokdonensis,CB.10.F.C1_120_34,99.99,0.08,4328284,35.92,Contig,6,1331753,MAG,92.12,3670.0,3714,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039943415.1,Maribacter dokdonensis,CB.07.M.B5_121_1,96.98,0.18,4155582,35.84,Contig,553,10847,MAG,91.92,3994.0,4089,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039943055.1,Maribacter dokdonensis,CB.04.M.C5_124_44,100.0,0.61,4349919,35.93,Contig,66,96272,MAG,92.1,3730.0,3778,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039942755.1,Maribacter dokdonensis,CB.42.M.D5_127_75,99.99,0.09,4355165,35.93,Contig,4,1558404,MAG,92.09,3693.0,3735,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039942115.1,Maribacter dokdonensis,CB.51.F.C3_134_54,99.99,0.07,4327161,35.92,Contig,12,485563,MAG,92.13,3674.0,3719,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039942075.1,Maribacter dokdonensis,CB.54.F.C2_137_101,99.99,0.08,4326977,35.92,Contig,6,1331894,MAG,92.11,3671.0,3713,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039941135.1,Maribacter dokdonensis,CB.37.F.D4_140_43,99.99,0.08,4329711,35.92,Contig,6,1331998,MAG,92.11,3673.0,3713,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039940815.1,Maribacter dokdonensis,CB.64.M.A6_145_12,99.99,0.08,4329715,35.93,Contig,10,543866,MAG,92.13,3674.0,3718,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039940535.1,Maribacter dokdonensis,CB.04.F.A3_155_30,99.99,0.08,4326790,35.92,Contig,6,1026216,MAG,92.12,3671.0,3714,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039939875.1,Maribacter dokdonensis,CB.01.F.D3_159_69,99.99,0.08,4326831,35.92,Contig,6,1331238,MAG,92.12,3672.0,3713,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039939615.1,Maribacter dokdonensis,AQ.28.F.A5_164_15,99.99,0.07,4329233,35.92,Contig,10,879094,MAG,92.12,3677.0,3718,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039939445.1,Maribacter dokdonensis,LC.106.F.A4_166_5,99.99,0.09,4347067,35.93,Contig,23,344991,MAG,92.08,3703.0,3747,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_002295505.1,Maribacter dokdonensis,UBA849,99.92,3.37,4451103,35.9,Scaffold,157,65718,MAG,90.89,3994.0,4028,,,,n/a,2017-09-12,2017-09-12,Uncultivated genome recovered from an assembly of the ERX552246 metagenome.,Yes - Maribacter dokdonensis
+GCF_905404085.1,Maribacter dokdonensis,Maribacter 62-1,100.0,0.11,4599229,36.18,Contig,83,140961,Isolate,91.38,4057.0,4130,,,,n/a,2021-04-15,2021-04-15,,Yes - Maribacter dokdonensis
+GCF_002362375.1,Maribacter dokdonensis,UBA3344,99.99,0.26,4438209,35.93,Scaffold,49,194762,MAG,91.05,3929.0,3979,,,,n/a,2017-09-26,2017-09-26,Uncultivated genome recovered from an assembly of the ERX552300 metagenome.,Yes - Maribacter dokdonensis
+GCF_002388445.1,Maribacter dokdonensis,UBA4516,99.31,4.44,4580411,35.83,Scaffold,304,36350,MAG,87.95,4167.0,4106,,,,n/a,2017-09-28,2017-09-28,Uncultivated genome recovered from an assembly of the ERX552321 metagenome.,Yes - Maribacter dokdonensis
+GCF_002435115.1,Maribacter dokdonensis,UBA6511,99.96,0.26,4374587,35.88,Scaffold,121,92385,MAG,90.83,3895.0,3937,,,,n/a,2017-10-04,2017-10-04,Uncultivated genome recovered from an assembly of the ERX552290 metagenome.,Yes - Maribacter dokdonensis
+GCF_002700155.1,Maribacter dokdonensis,6B07,100.0,0.22,4506133,35.99,Scaffold,11,995188,Isolate,91.8,3826.0,3876,,,42.25 N 70.54 W,USA: Canoe Beach; Nahant; MA,2017-10-24,2017-10-24,,Yes - Maribacter dokdonensis
+GCF_963692985.1,Maribacter dokdonensis,44847,100.0,0.07,4490751,35.98,Complete Genome,1,4490751,Isolate,91.89,3799.0,3855,,,,n/a,2023-12-06,2023-12-06,,Yes - Maribacter dokdonensis
+GCF_963972375.1,Maribacter dokdonensis,ERR594353_metabat2_29,99.99,0.32,4437587,35.93,Contig,59,186386,MAG,91.68,3941.0,3990,,,,n/a,2024-03-10,2024-03-10,,Yes - Maribacter dokdonensis
+GCF_963974025.1,Maribacter dokdonensis,ERR2762106_metabat2_93,91.42,0.07,3805441,36.0,Contig,143,49884,MAG,92.02,3375.0,3441,,,,n/a,2024-03-10,2024-03-10,,Yes - Maribacter dokdonensis
+GCF_030689185.1,Maribacter dokdonensis,5F06,100.0,0.08,4357305,36.04,Contig,21,652014,Isolate,92.15,3684.0,3724,,,42.420 N 70.907 W,USA:Canoe Beach; Nahant; MA,2023-08-08,2023-08-08,Keywords: GSC:MIxS;MIGS:6.0,Yes - Maribacter dokdonensis
+GCF_964009995.1,Maribacter dokdonensis,ERR594331_binner123_Refined_58,99.98,0.17,4194894,35.91,Contig,25,205009,MAG,91.86,3638.0,3672,,,,n/a,2024-03-21,2024-03-21,,Yes - Maribacter dokdonensis
+GCF_018860675.1,Maribacter dokdonensis,C3R19,100.0,0.06,4436697,36.05,Scaffold,24,458727,Isolate,91.65,3778.0,3827,,,42.25 N 70.54 W,USA: Massachusetts; Nahant; Canoe Beach,2021-06-12,2021-06-12,isolate from particle enrichment,Yes - Maribacter dokdonensis
+GCF_001447995.1,Maribacter dokdonensis,DSW-8,99.99,0.13,4434543,35.95,Contig,16,2230298,Isolate,91.84,3748.0,3795,,,,South Korea,2015-11-25,2015-11-25,Genome sequence of Maribacter dokdonensis DSW-8,Yes - Maribacter dokdonensis
+GCF_001865655.1,Maribacter dokdonensis,1_2014MBL_MicDiv,99.99,0.02,4399611,35.95,Complete Genome,1,4399611,Isolate,91.81,3741.0,3777,,,41.527333 N 70.675694 W,USA: Woods Hole; MA,2016-11-03,2016-11-03,Maribacter isolated on Cytophaga medium from seaweed from the Woods Hole Yacht Club during 2014 Microbial Diversity course at Marine Biology Laboratory,Yes - Maribacter dokdonensis
+GCF_039974395.1,Maribacter dokdonensis,CI.31.F.D2_424_86,100.0,1.53,4469813,35.86,Contig,19,789017,MAG,91.84,3813.0,3862,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039973715.1,Maribacter dokdonensis,AQ.34.F.B6_43_1,99.88,0.7,4564052,35.84,Contig,240,36394,MAG,91.91,4000.0,4081,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCA_039940215.1,Maribacter dokdonensis,CB.75.F.D4_158_25,91.95,0.42,3781702,36.01,Contig,357,16254,MAG,92.42,3441.0,3515,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039971075.1,Maribacter dokdonensis,LC.10.F.D3_173_42,99.99,0.08,4473361,35.93,Contig,28,341803,MAG,92.05,3764.0,3815,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039970655.1,Maribacter dokdonensis,LC.119.F.D4_174_82,99.99,0.07,4316969,35.93,Contig,5,1468372,MAG,92.15,3656.0,3696,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039982355.1,Maribacter dokdonensis,CI.26.F.C1_514_63,90.67,1.89,4108208,36.1,Contig,348,18070,MAG,91.94,3669.0,3754,,Macrocystis pyrifera,,n/a,2024-05-31,2024-05-31,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039970295.1,Maribacter dokdonensis,CB.49.F.A1_179_71,99.99,0.07,4330269,35.93,Contig,6,2200173,MAG,92.12,3673.0,3716,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_039984575.1,Maribacter dokdonensis,LC.09.M.C6_495_92,99.91,0.83,4441614,35.9,Contig,92,80056,MAG,92.03,3791.0,3853,,Macrocystis pyrifera,,n/a,2024-05-31,2024-05-31,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter dokdonensis
+GCF_036323785.1,Maribacter flavus,KPT27_14,99.98,0.33,4111314,41.95,Contig,192,614045,Isolate,90.91,3622.0,3727,,Thalassiosira minima,,n/a,2024-01-31,2024-01-31,,Yes - Maribacter flavus
+GCF_005780245.1,Maribacter flavus,KCTC 52409,99.98,0.01,4158743,41.8,Contig,35,291397,Isolate,90.86,3556.0,3649,,,,South Korea,2019-05-22,2019-05-22,,Yes - Maribacter flavus
+GCF_008386635.1,Maribacter flavus,KCTC 42508,100.0,0.66,4303602,41.81,Scaffold,11,766565,Isolate,90.93,3712.0,3791,,,,China,2019-09-15,2019-09-15,,Yes - Maribacter flavus
+GCF_028464205.1,Maribacter flavus,PR66,99.98,0.25,4066610,41.94,Contig,27,311016,Isolate,90.95,3495.0,3569,,Protoceratium reticulatum,,China,2023-02-05,2023-02-05,,Yes - Maribacter flavus
+GCF_000744105.1,Maribacter forsetii,DSM 18668,100.0,0.07,4514366,35.18,Contig,1,4514366,Isolate,90.93,3838.0,3861,,,,n/a,2014-08-28,2014-08-28,Keywords: GSC:MIxS;MIGS:6.0,Yes - Maribacter forsetii
+GCF_947496805.1,Maribacter huludaoensis,4-2109-3Z.fasta,100.0,0.08,4305749,35.88,Contig,63,386565,MAG,90.95,3685.0,3724,,,,n/a,2023-01-30,2023-01-30,,No
+GCF_020629415.1,Maribacter huludaoensis,MAG-157,94.95,0.07,3895488,35.89,Scaffold,134,50703,MAG,90.33,3416.0,3435,,Pyropia haitanensis,,China: Rizhao City and Ningde City,2021-10-26,2021-10-26,Keywords: GSC:MIxS;MIMAG:6.0,No
+GCF_029350945.1,Maribacter huludaoensis,M208,100.0,0.18,4236768,35.85,Scaffold,32,341292,Isolate,90.61,3634.0,3676,,,,China,2023-03-22,2023-03-22,,No
+GCF_001913155.1,Maribacter hydrothermalis,T28,99.99,0.27,4271158,34.39,Complete Genome,1,4271158,Isolate,90.41,3659.0,3711,,,24 N 121 E,Taiwan: Kueishan Island,2016-12-21,2016-12-21,,Yes - Maribacter hydrothermalis
+GCF_003075045.1,Maribacter litoralis,SDRB-Phe2,99.98,0.05,4564535,35.94,Scaffold,40,941454,Isolate,91.04,3989.0,4042,,,,South Korea: Taean beach,2018-04-30,2018-04-30,,Yes - Maribacter litoralis
+GCF_902506355.1,Maribacter litoralis,Maribacter sp. 151,99.97,0.01,4364915,35.9,Scaffold,6,2692075,Isolate,91.76,3710.0,3753,,Ectocarpus subulatus,,n/a,2020-01-03,2020-01-03,,Yes - Maribacter litoralis
+GCF_039967355.1,Maribacter litoralis,LC.122.F.D4_220_62,98.05,1.18,4463799,35.71,Contig,239,28225,MAG,91.39,3996.0,4062,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,Yes - Maribacter litoralis
+GCF_900109345.1,Maribacter orientalis,DSM 16471,100.0,0.07,4163533,35.11,Scaffold,29,574194,Isolate,89.86,3666.0,3723,,,,n/a,2016-10-31,2016-10-31,Keywords: GSC:MIxS;MIGS:6.0,Yes - Maribacter orientalis
+GCF_007827235.1,Maribacter sedimenticola,MAR_2009_72,100.0,0.29,4347041,37.67,Contig,1,4347041,Isolate,91.67,3643.0,3716,,,,n/a,2019-08-02,2019-08-02,Keywords: GSC:MIxS;MIGS:6.0,Yes - Maribacter sedimenticola
+GCF_900188415.1,Maribacter sedimenticola,DSM 19840,99.99,0.01,4269365,37.51,Scaffold,24,776522,Isolate,91.45,3642.0,3699,,,,n/a,2017-07-16,2017-07-16,Keywords: GSC:MIxS;MIGS:6.0,Yes - Maribacter sedimenticola
+GCF_002742265.1,Maribacter sp002742265,4G9,99.98,0.2,4601542,40.81,Contig,197,102869,Isolate,89.76,4224.0,4378,,,35.16 N 139.61 E,Japan: Aburatsubo Inlet; Kanagawa Prefecture,2017-11-02,2017-11-02,Keywords: GSC:MIxS;MIGS:6.0,No
+GCA_947503645.1,Maribacter sp002742365,2-1007.fasta,99.96,0.01,3941453,39.3,Contig,187,518965,MAG,91.71,,3571,,,,n/a,2023-01-28,2023-01-28,,No
+GCA_947496165.1,Maribacter sp002742365,1164-3Z.fasta,99.96,0.01,3923423,39.22,Contig,44,518965,MAG,91.7,,3440,,,,n/a,2023-01-28,2023-01-28,,No
+GCF_002742365.1,Maribacter sp002742365,4U21,99.87,0.04,3673989,39.41,Contig,83,124535,Isolate,90.87,3351.0,3411,,,35.16 N 139.61 E,Japan: Aburatsubo Inlet; Kanagawa Prefecture,2017-11-02,2017-11-02,Keywords: GSC:MIxS;MIGS:6.0,No
+GCF_003970695.1,Maribacter sp002742365,MJ134,99.99,0.07,4016247,39.35,Complete Genome,1,4016247,Isolate,91.41,3462.0,3530,,,,South Korea: Pohang,2018-12-25,2018-12-25,,No
+GCA_947503955.1,Maribacter sp002742365,2-1157.fasta,99.7,0.02,3789536,39.28,Contig,88,550123,MAG,91.7,,3383,,,,n/a,2023-01-28,2023-01-28,,No
+GCF_011050675.1,Maribacter sp011050675,HyVt-319,99.99,0.06,4714719,34.44,Contig,31,311961,MAG,90.8,4097.0,4148,,,73.763167 N 8.464000 E,Arctic Ocean: Gakkel Ridge,2020-03-02,2020-03-02,,No
+GCF_018100785.1,Maribacter sp018100785,MMG018,99.98,0.19,4129192,38.84,Contig,17,1329757,Isolate,91.22,3549.0,3624,,,,USA: San Diego; Sunset Cliffs,2021-04-19,2021-04-19,Keywords: GSC:MIxS;MIGS:6.0,No
+GCF_036323885.1,Maribacter sp028464145,PR1,99.78,0.37,4727315,38.62,Contig,23,441839,Isolate,91.22,4152.0,4218,,Protoceratium reticulatum,,n/a,2024-01-31,2024-01-31,,No
+GCF_028464145.1,Maribacter sp028464145,PR1,99.78,0.37,4727315,38.62,Contig,23,441839,Isolate,91.23,4152.0,4219,,Protoceratium reticulatum,,China,2023-02-05,2023-02-05,,No
+GCF_030547005.1,Maribacter sp030547005,G3R17,99.98,0.03,4266505,34.73,Contig,45,243048,Isolate,90.69,3687.0,3721,,,42.420 N 70.907 W,USA:Canoe Beach; Nahant; MA,2023-07-26,2023-07-26,Keywords: GSC:MIxS;MIGS:6.0,No
+GCF_035207705.1,Maribacter sp035207705,BPC-D8,100.0,0.1,4783464,34.63,Complete Genome,1,4783464,Isolate,90.33,4114.0,4169,,Ulva,,n/a,2024-01-03,2024-01-03,,No
+GCA_038256135.1,Maribacter sp038256135,metawrap_LS4_20,91.65,1.34,3570255,39.07,Contig,301,16932,MAG,88.71,,3390,,,69.37 S 76.36 E,n/a,2024-04-16,2024-04-16,Keywords: GSC:MIxS;MIMAG:6.0,No
+GCF_039968975.1,Maribacter sp039968975,LC.101.F.A3_199_75,98.45,0.84,4217562,34.55,Contig,285,22809,MAG,91.22,3791.0,3853,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,No
+GCA_937125035.1,Maribacter sp937125035,SRR4030105_bin.172_CONCOCT_v1.1_MAG,92.75,0.72,3584848,46.8,Contig,360,16306,MAG,91.11,,3379,,,,n/a,2023-01-11,2023-01-11,,No
+GCF_947500985.1,Maribacter sp947500985,2B2-74-3Z.fasta,99.99,0.12,4247132,34.61,Contig,42,604742,MAG,90.84,3697.0,3738,,,,n/a,2023-01-28,2023-01-28,,No
+GCF_947500225.1,Maribacter sp947500985,2-695-G.fasta,100.0,0.08,4460173,34.65,Contig,37,1430218,MAG,90.92,3840.0,3873,,,,n/a,2023-01-30,2023-01-30,,No
+GCF_963974015.1,Maribacter sp963974015,ERR2762106_binner12_Refined_132,95.17,0.34,4045479,35.07,Contig,43,220672,MAG,90.46,3591.0,3647,,,,n/a,2024-03-10,2024-03-10,,No
+GCF_963975365.1,Maribacter sp963975365,ERR2762109_binner12_Refined_45,99.95,0.25,4151245,35.2,Contig,35,206701,MAG,90.03,3720.0,3777,,,,n/a,2024-03-10,2024-03-10,,No
+GCA_963975675.1,Maribacter sp963975675,ERR2762155_binner13_Refined_1,90.24,2.77,3506382,34.44,Contig,431,10649,MAG,90.72,,3527,,,,n/a,2024-03-10,2024-03-10,,No
+GCF_963977385.1,Maribacter sp963977385,ERR2762185_binner13_Refined_17,100.0,0.12,4823095,34.76,Contig,34,190023,MAG,90.23,4180.0,4246,,,,n/a,2024-03-10,2024-03-10,,No
+GCF_004364165.1,Maribacter spongiicola,DSM 25233,100.0,0.12,4455565,35.13,Scaffold,23,1103697,Isolate,90.5,3813.0,3851,,,,n/a,2019-03-22,2019-03-22,Keywords: GSC:MIxS;MIGS:6.0,Yes - Maribacter spongiicola
+GCF_947497355.1,Maribacter stanieri,3-2157-J.fasta,100.0,0.18,4667058,34.39,Contig,16,2574161,Isolate,91.42,3963.0,4000,,,,n/a,2023-01-30,2023-01-30,,Yes - Maribacter stanieri
+GCF_947499185.1,Maribacter stanieri,3-1165.fasta,100.0,0.1,4463286,34.32,Contig,15,833658,Isolate,91.61,3826.0,3861,,,,n/a,2023-01-30,2023-01-30,,Yes - Maribacter stanieri
+GCF_000688315.1,Maribacter stanieri,Hel_I_7,100.0,0.15,4775040,34.75,Contig,3,2196190,Isolate,91.23,4124.0,4179,,,54.1841 N 7.9 E,n/a,2014-04-08,2014-04-08,,Yes - Maribacter stanieri
+GCF_900112245.1,Maribacter stanieri,DSM 19891,100.0,0.1,4460741,34.37,Scaffold,12,805828,Isolate,91.23,3828.0,3877,,,,n/a,2016-11-02,2016-11-02,Keywords: GSC:MIxS;MIGS:6.0,Yes - Maribacter stanieri
+GCF_963977265.1,Maribacter stanieri,ERR2762177_binner12_Refined_45,99.98,0.22,4771979,34.66,Contig,28,335796,MAG,91.32,4144.0,4194,,,,n/a,2024-03-10,2024-03-10,,Yes - Maribacter stanieri
+GCF_001020565.1,Maribacter thermophilus,HT7-2,100.0,0.14,4050606,38.93,Scaffold,7,1358364,Isolate,91.08,3465.0,3535,,,,China: Qingdao Sea area,2015-06-05,2015-06-05,,Yes - Maribacter thermophilus
+GCF_900155985.1,Maribacter ulvicola,DSM 15366,99.96,0.03,4511475,35.19,Contig,24,458180,Isolate,89.1,3835.0,3902,,,,n/a,2017-01-15,2017-01-15,Keywords: GSC:MIxS;MIGS:6.0,Yes - Maribacter ulvicola
+GCA_039968355.1,Maribacter zhoushanensis,LC.06.F.A3_204_45,93.57,2.57,4032549,34.78,Contig,492,11307,MAG,91.52,3810.0,3901,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,No
+GCF_029350975.1,Maribacter zhoushanensis,SA7,99.98,0.19,4257159,34.84,Scaffold,22,844229,Isolate,91.12,3675.0,3689,,,,China,2023-03-22,2023-03-22,,No
+GCF_014596745.1,Maribacter_A aquimaris,ANRC-HE7,99.99,0.12,4863295,40.08,Contig,27,313641,Isolate,88.95,4019.0,4145,,,,Antarctica: Fildes Peninsula,2020-09-15,2020-09-15,,No
+GCF_014610845.1,Maribacter_A arenosus,CAU 1321,99.99,0.04,4171209,39.88,Contig,24,655689,Isolate,90.22,3653.0,3761,,,,South Korea: Incheon; Eurwangri Beach,2020-09-16,2020-09-16,,No
+GCF_947502255.1,Maribacter_A luteus,N258-1-Z.fasta,99.99,0.38,4631873,38.71,Contig,88,565386,Isolate,90.0,3980.0,4101,,,,n/a,2023-01-30,2023-01-30,,No
+GCF_009674825.1,Maribacter_A luteus,RZ05,99.96,0.56,4651603,38.94,Scaffold,38,423284,Isolate,90.21,3878.0,3949,,,35.47 N 119.6 E,China: the Yellow Sea,2019-11-19,2019-11-19,Keywords: GSC:MIxS;MIGS:6.0,No
+GCF_033101095.1,Maribacter_A luteus,TH_r10,99.94,0.35,4550641,38.98,Contig,66,994886,Isolate,90.57,3825.0,3902,,,37.856 S 144.959 E,n/a,2023-10-29,2023-10-29,Keywords: GSC:MIxS;MIGS:6.0,No
+GCA_963977535.1,Maribacter_A luteus,ERR2762185_binner23_Refined_38,99.25,0.48,3856414,39.18,Contig,435,12262,MAG,90.51,,3686,,,,n/a,2024-03-10,2024-03-10,,No
+GCF_028882255.1,Maribacter_A polysaccharolyticus,D37,99.96,0.1,4760098,41.67,Scaffold,33,577838,Isolate,89.13,3976.0,4112,,,,China,2023-02-27,2023-02-27,,No
+GCA_041583975.1,Maribacter_A polysaccharolyticus,Mix_sand07.2021.05.G.108,96.63,4.71,3772367,42.25,Contig,719,6595,MAG,90.08,,3782,,,29.928 N 122.422 E,n/a,2024-08-29,2024-08-29,Keywords: GSC:MIxS;MIMAG:6.0,No
+GCF_905479785.1,Maribacter_A polysiphoniae,10_20180417_Bin_42_1,96.53,01.06,4746203,40.36,Contig,100,73782,MAG,89.86,4028.0,4156,,,,n/a,2021-04-15,2021-04-15,,No
+GCF_014673435.1,Maribacter_A polysiphoniae,KCTC 22021,99.96,0.22,5135292,40.3,Contig,32,478388,Isolate,89.57,4356.0,4485,,,,Japan:Gulf of Peter the Great,2020-09-21,2020-09-21,,No
+GCF_003148665.1,Maribacter_A polysiphoniae,DSM 23514,99.96,0.31,5129962,40.3,Scaffold,38,290338,Isolate,89.46,4373.0,4499,,,,n/a,2018-05-22,2018-05-22,Keywords: GSC:MIxS;MIGS:6.0,No
+GCF_000153165.2,Maribacter_A sp000153165,HTCC2170,100.0,0.0,3868304,36.98,Complete Genome,1,3868304,Isolate,92.54,3360.0,3409,,,,n/a,2010-08-24,2010-08-24,,No
+GCA_024644765.1,Maribacter_A sp018679695,Ww434,91.61,01.09,3497102,39.16,Scaffold,372,12819,MAG,91.13,,3468,,,36.541361 S 174.701806 E,New Zealand: Waiwera River; Auckland,2022-08-12,2022-08-12,Keywords: GSC:MIxS;MIMAG:6.0,No
+GCA_018679695.1,Maribacter_A sp018679695,IDS-26,94.85,0.21,3525964,39.28,Contig,478,10096,MAG,91.29,3444.0,3567,,,37.86 S 144.96 E,Australia: Port Phillip Bay,2021-06-02,2021-06-02,Keywords: GSC:MIxS;MIMAG:6.0,No
+GCA_024228355.1,Maribacter_A sp024228355,Vin_8,99.96,2.52,4695109,37.77,Contig,807,17663,MAG,88.13,4398.0,4759,,Valvulineria inflata,,Peru: Oxygen minimum zone,2022-07-12,2022-07-12,,No
+GCA_024279425.1,Maribacter_A sp024279425,Dive100_bin3.23,100.0,1.35,5272228,38.44,Contig,140,153836,MAG,88.94,,4903,,,37.78 S 49.65 E,Indian Ocean: Longqi hydrothermal vent field; ultraslow-spreading Southwestern Indian Ridge,2022-07-15,2022-07-15,Keywords: GSC:MIxS;MIMAG:6.0,No
+GCF_016744255.1,Maribacter_B sp016744255,BB42,99.88,0.45,3586786,33.11,Scaffold,186,30599,MAG,90.34,3295.0,3352,,,60.2381 N 5.1812 E,Norway: Byfjorden; Bergen,2021-01-22,2021-01-22,,No
+GCA_947493885.1,Maribacter_B sp947493885,4-549.fasta,99.77,0.05,3838094,33.3,Contig,52,544263,MAG,92.09,,3457,,,,n/a,2023-01-28,2023-01-28,,No
+GCF_947495965.1,Maribacter_B sp947495965,4-441.fasta,99.75,0.92,3904503,31.7,Contig,35,341403,MAG,92.09,3354.0,3372,,,,n/a,2023-01-28,2023-01-28,,No
+GCF_947496775.1,Maribacter_B sp947496775,3-726-G.fasta,99.76,0.19,3961977,32.74,Contig,69,286815,MAG,90.38,3580.0,3608,,,,n/a,2023-01-28,2023-01-28,,No
+GCF_947499345.1,Maribacter_B sp947496775,4-460.fasta,99.25,0.1,3894307,32.76,Contig,72,794140,MAG,90.69,3443.0,3462,,,,n/a,2023-01-28,2023-01-28,,No
+GCA_947498585.1,Maribacter_B sp947498505,586.fasta,99.32,0.13,4029043,33.36,Contig,42,609014,MAG,91.85,,3526,,,,n/a,2023-01-28,2023-01-28,,No
+GCA_947497925.1,Maribacter_B sp947498505,4-670-3Z.fasta,99.63,0.16,4001459,33.39,Contig,52,716048,MAG,91.95,,3543,,,,n/a,2023-01-28,2023-01-28,,No
+GCA_947501755.1,Maribacter_B sp947498505,2-498A.fasta,99.85,0.11,3920470,33.36,Contig,64,267302,MAG,91.86,,3494,,,,n/a,2023-01-28,2023-01-28,,No
+GCA_947498505.1,Maribacter_B sp947498505,515-3Z.fasta,99.26,0.22,4084107,33.37,Contig,37,618864,MAG,91.96,,3587,,,,n/a,2023-01-28,2023-01-28,,No
+GCF_947500405.1,Maribacter_B sp947500405,2-618.fasta,99.93,0.06,3607902,31.54,Contig,90,400811,MAG,90.79,3184.0,3210,,,,n/a,2023-01-27,2023-01-27,,No
+GCA_947504045.1,Maribacter_B sp947504045,929-3Z.fasta,99.7,0.24,3455399,31.09,Contig,42,693621,MAG,92.03,,3009,,,,n/a,2023-01-27,2023-01-27,,No
+GCF_003634105.1,Maribacter_B vaceletii,DSM 25230,99.81,0.04,3889815,31.71,Scaffold,16,771605,Isolate,92.06,3327.0,3352,,,,n/a,2018-10-11,2018-10-11,Keywords: GSC:MIxS;MIGS:6.0,No
+GCF_005885635.1,Maribacter_C algarum,RZ26,99.94,0.19,5110706,37.97,Scaffold,21,1114618,Isolate,91.99,4379.0,4463,,red algae,,China: Weihai,2019-05-29,2019-05-29,,No
+GCA_947499805.1,Maribacter_C algarum,RZ26.fasta,99.94,0.19,5110696,37.97,Contig,21,1114618,MAG,91.98,,4463,,,,n/a,2023-01-28,2023-01-28,,No
+GCA_029287355.1,Maribacter_C sp029287355,MAG_Ve_Sed_45,95.81,2.84,4229886,40.02,Contig,353,17024,MAG,89.71,,4042,,,45.40783170 N 12.2916655 E,Italy: Venice Lagoon,2023-03-20,2023-03-20,Keywords: GSC:MIxS;MIMAG:6.0,No
+GCF_039974175.1,Maribacter_C sp039974175,CI.62.F.A4_427_31,100.0,0.04,4581310,39.43,Contig,13,878033,MAG,91.4,4018.0,4081,,Macrocystis pyrifera,,n/a,2024-05-30,2024-05-30,Keywords: GSC:MIxS;MIMAG:6.0,No
+GCA_937944485.1,Maribacter_C sp937944485,H4_Bin_METABAT__174_1,93.15,0.07,3413003,36.13,Contig,35,160901,MAG,91.48,,3051,,,,n/a,2023-01-27,2023-01-27,,No
+GCA_938029725.1,Maribacter_C sp938029725,R3_Bin_METABAT__35_sub_1,92.15,2.46,3800657,37.04,Contig,81,90665,MAG,89.33,,3297,,,,n/a,2023-01-28,2023-01-28,,No
+GCA_947486785.1,Maribacter_C sp947486785,2-1852.fasta,99.8,0.0,3569493,34.09,Contig,137,133577,MAG,85.9,,2998,,,,n/a,2023-01-27,2023-01-27,,No
+GCA_947494565.1,Maribacter_C sp947494565,2-815.fasta,99.99,0.46,5392258,42.47,Contig,46,451572,MAG,91.36,,4767,,,,n/a,2023-01-30,2023-01-30,,No
+GCA_947495915.1,Maribacter_C sp947495915,4-528.fasta,99.99,0.38,4174141,35.17,Contig,35,462307,MAG,91.69,,3643,,,,n/a,2023-01-28,2023-01-28,,No
+GCA_947497415.1,Maribacter_C sp947495915,4-1016.fasta,99.99,0.52,4153948,35.21,Contig,29,877018,MAG,91.69,,3619,,,,n/a,2023-01-28,2023-01-28,,No
+GCA_947497145.1,Maribacter_C sp947497145,3-1814-Z.fasta,99.97,0.0,5107908,35.68,Contig,198,217595,MAG,86.93,,4158,,,,n/a,2023-01-30,2023-01-30,,No
+GCA_947500435.1,Maribacter_C sp947500435,2-612-J.fasta,99.98,0.04,4924672,38.17,Contig,43,746516,MAG,91.58,,4354,,,,n/a,2023-01-30,2023-01-30,,No
+GCA_947503005.1,Maribacter_C sp947503005,N2Y089-1.fasta,99.96,0.21,4576141,39.29,Contig,31,552514,MAG,91.51,,3920,,,,n/a,2023-01-30,2023-01-30,,No
+GCF_027474825.1,Maribacter_D halichondriae,Hal144,94.68,3.45,4529002,41.44,Complete Genome,1,4529002,Isolate,90.15,4279.0,4524,,Halichondria panicea,,Germany: Schilksee; Kiel Fjord; Baltic Sea; Latitude: 54.42470; Longitude: 10.17513,2023-01-23,2023-01-23,,No
+GCA_019931105.1,Maribacter_D sp019931105,NBU2977,99.97,0.03,3819109,42.5,Contig,18,2036379,Isolate,91.44,,3439,,,,China: Ningbo city,2021-09-12,2021-09-12,,No
+GCA_030428705.1,Maribacter_D sp030428705,7_bin.65,99.99,0.03,4157592,42.17,Contig,17,591830,MAG,92.01,,3748,,,37.7000 N 126.3888 E,South Korea,2023-07-11,2023-07-11,Keywords: GSC:MIxS;MIMAG:6.0,No
