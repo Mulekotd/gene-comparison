@@ -14,6 +14,7 @@ REFERENCE = "GCF_027474845.2"
 
 
 def main() -> None:
+    sys.stdout.reconfigure(encoding="utf-8")
     by_gene = defaultdict(dict)
 
     with (ROOT / "resources" / "proteins.csv").open(newline="", encoding="utf-8") as handle:
@@ -26,9 +27,9 @@ def main() -> None:
             by_gene[gene][assembly] = load_cds(row)
 
     writer = csv.writer(sys.stdout)
-    writer.writerow(("gene", "referencia", "comparado", "bases_diferentes", "codons_sinonimos",
-                     "codons_nao_sinonimos", "aminoacidos_diferentes", "codon_parada_referencia",
-                     "codon_parada_comparado"))
+    writer.writerow(("gene", "referência", "comparado", "bases_diferentes", "códons_sinônimos",
+                     "códons_não_sinônimos", "aminoácidos_diferentes", "códon_parada_referência",
+                     "códon_parada_comparado"))
 
     for gene, sequences in sorted(by_gene.items()):
         if len(sequences) != 4 or REFERENCE not in sequences:
@@ -59,4 +60,16 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    sys.stderr.reconfigure(encoding="utf-8")
+
+    try:
+        main()
+    except ValueError as erro:
+        print(f"erro: {erro}", file=sys.stderr)
+        raise SystemExit(1) from None
+    except KeyError as erro:
+        print(f"erro: Campo ausente nos dados: {erro.args[0]}", file=sys.stderr)
+        raise SystemExit(1) from None
+    except OSError as erro:
+        print(f"erro: Falha ao acessar o sistema de arquivos em {erro.filename} (código {erro.errno})", file=sys.stderr)
+        raise SystemExit(1) from None

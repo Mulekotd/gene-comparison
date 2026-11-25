@@ -17,6 +17,6 @@ Estas são diferenças observadas entre sequências atuais. Não mostram em qual
 Arquivos produzidos para cada gene em `results/<gene>/`:
 
 - `protein_alignment.faa` e `cds_alignment.fna`: alinhamentos múltiplos;
-- `pairs.tsv`: identidades, scores e lacunas nos seis pares;
+- `pairs.tsv`: identidades e lacunas nos seis pares;
 - `codon_effects.tsv`: bases diferentes, códons sinônimos, não sinônimos e com lacuna;
 - `summary.tsv`: colunas conservadas, substituídas e com lacuna.

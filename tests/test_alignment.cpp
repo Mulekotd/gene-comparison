@@ -71,5 +71,5 @@ int main() {
         assert(serial[i].alignment.score == parallel[i].alignment.score);
     }
 
-    std::cout << "alignment tests passed\n";
+    std::cout << "Testes de alinhamento aprovados\n";
 }

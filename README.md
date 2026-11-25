@@ -43,3 +43,12 @@ make
 ```
 
 `--protein` é opcional e usa `recA` por padrão. O programa compara somente os seis pares únicos de cada gene em threads e constrói um alinhamento múltiplo progressivo das quatro proteínas. No modo `cds`, o alinhamento das proteínas orienta a projeção dos códons, preservando o quadro de leitura. `--threads N` limita a quantidade de threads; `--benchmark` também executa os pares sequencialmente e confere se os resultados são idênticos. Os arquivos gerados ficam em `results/<gene>/`: alinhamentos FASTA, tabela de pares, efeitos por códon e resumo de colunas. A [interpretação inicial](docs/resultados.md) reúne os três genes.
+
+## Organização do código
+
+- `src/main.cpp`: coordena a análise e trata os erros da execução;
+- `src/cli.cpp`: interpreta os argumentos da linha de comando;
+- `src/fasta.cpp`: lê, valida e grava sequências FASTA;
+- `src/alignment.cpp` e `src/multiple_alignment.cpp`: calculam os alinhamentos e as métricas;
+- `src/report.cpp`: grava os resultados e apresenta o resumo no terminal;
+- `src/utils.cpp`: compara resultados para a verificação do benchmark.

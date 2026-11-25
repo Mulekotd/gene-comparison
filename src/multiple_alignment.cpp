@@ -105,13 +105,13 @@ std::vector<std::string> add_sequence(const std::vector<std::string>& profile, c
 }
 
 // Feng e Doolittle (1987), J. Mol. Evol. 25:351-360, PMID 3118049:
-// alinhamento progressivo; neste projeto, a ordem é a dos acessos de montagem.
+// alinhamento progressivo; neste projeto, a ordem é a dos acessos de montagem
 std::vector<std::string> align_progressively(const std::vector<std::string>& proteins) {
     if (proteins.empty())
-        throw std::invalid_argument("No protein sequences to align");
+        throw std::invalid_argument("Não há sequências proteicas para alinhar");
 
     for (const auto& protein : proteins) {
-        if (protein.empty()) throw std::invalid_argument("Empty protein sequence");
+        if (protein.empty()) throw std::invalid_argument("Sequência proteica vazia");
     }
 
     std::vector<std::string> aligned{proteins.front()};
@@ -124,11 +124,11 @@ std::vector<std::string> align_progressively(const std::vector<std::string>& pro
 }
 
 // Suyama, Torrents e Bork (2006), Nucleic Acids Res. 34:W609-W612,
-// PMID 16845082: projeção do alinhamento proteico sobre os códons.
+// PMID 16845082: projeção do alinhamento proteico sobre os códons
 std::vector<std::string> project_multiple_codons(const std::vector<std::string>& aligned_proteins,
                                                  const std::vector<std::string>& coding_sequences) {
     if (aligned_proteins.empty() || aligned_proteins.size() != coding_sequences.size()) {
-        throw std::invalid_argument("Protein and CDS counts differ");
+        throw std::invalid_argument("As quantidades de proteínas e CDSs são diferentes");
     }
 
     const std::size_t columns = aligned_proteins.front().size();
@@ -139,7 +139,7 @@ std::vector<std::string> project_multiple_codons(const std::vector<std::string>&
     for (std::size_t row = 0; row < aligned_proteins.size(); ++row) {
         if (aligned_proteins[row].size() != columns ||
             coding_sequences[row].size() != 3 * (residue_count(aligned_proteins[row]) + 1)) {
-            throw std::invalid_argument("CDS length does not match protein alignment");
+            throw std::invalid_argument("O comprimento da CDS não corresponde ao alinhamento proteico");
         }
 
         std::string nucleotides;
@@ -164,14 +164,14 @@ std::vector<std::string> project_multiple_codons(const std::vector<std::string>&
 }
 
 ColumnSummary summarize_columns(const std::vector<std::string>& aligned_sequences) {
-    if (aligned_sequences.empty()) throw std::invalid_argument("No aligned sequences");
+    if (aligned_sequences.empty()) throw std::invalid_argument("Não há sequências alinhadas");
 
     const std::size_t columns = aligned_sequences.front().size();
     ColumnSummary summary;
 
     for (const auto& row : aligned_sequences) {
         if (row.size() != columns)
-            throw std::invalid_argument("Alignment rows have different lengths");
+            throw std::invalid_argument("As sequências do alinhamento têm comprimentos diferentes");
     }
 
     for (std::size_t column = 0; column < columns; ++column) {
@@ -191,13 +191,13 @@ ColumnSummary summarize_columns(const std::vector<std::string>& aligned_sequence
 }
 
 // Zhang e Kumar (1997), Mol. Biol. Evol. 14:527-536, pp. 527-528:
-// estas contagens são descritivas; convergência exige filogenia e ancestrais inferidos.
+// estas contagens são descritivas; convergência exige filogenia e ancestrais inferidos
 CodonEffects compare_codons(const Alignment& aligned_proteins,
                             const std::string& first_cds, const std::string& second_cds) {
     if (aligned_proteins.first.size() != aligned_proteins.second.size() ||
         first_cds.size() != 3 * (residue_count(aligned_proteins.first) + 1) ||
         second_cds.size() != 3 * (residue_count(aligned_proteins.second) + 1)) {
-        throw std::invalid_argument("CDS length does not match paired proteins");
+        throw std::invalid_argument("O comprimento da CDS não corresponde ao alinhamento do par de proteínas");
     }
 
     CodonEffects result;

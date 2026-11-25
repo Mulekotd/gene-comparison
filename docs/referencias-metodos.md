@@ -14,7 +14,7 @@ As três obras acima **não descrevem** diretamente os procedimentos de alinhame
 - [Feng e Doolittle (1987)](https://pubmed.ncbi.nlm.nih.gov/3118049/): ideia de construção progressiva do alinhamento múltiplo em `align_progressively()`. Nossa ordem de inclusão é a dos acessos, sem árvore guia filogenética.
 - [Suyama, Torrents e Bork (2006)](https://pubmed.ncbi.nlm.nih.gov/16845082/): projeção de um alinhamento de proteínas sobre as CDS correspondentes em `project_codons()` e `project_multiple_codons()`. Nosso código pressupõe CDS íntegras e tradução validada; não implementa todas as tolerâncias do PAL2NAL.
 
-A pontuação `+2` para coincidência, `−1` para substituição e `−3` para lacuna, o uso de threads e a matriz de scores com duas linhas são escolhas deste projeto. Elas não foram atribuídas às obras citadas. Os alinhamentos e contagens estão em [resultados.md](resultados.md).
+A pontuação `+2` para coincidência, `−1` para substituição e `−3` para lacuna, o uso de threads e a matriz de pontuações com duas linhas são escolhas deste projeto. Elas não foram atribuídas às obras citadas. Os alinhamentos e contagens estão em [resultados.md](resultados.md).
 
 ## Para as próximas alterações
 

@@ -9,8 +9,8 @@ all: build/gene-comparison
 build:
 	mkdir -p build
 
-build/gene-comparison: src/main.cpp src/alignment.cpp src/alignment.hpp src/multiple_alignment.cpp src/multiple_alignment.hpp | build
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) src/main.cpp src/alignment.cpp src/multiple_alignment.cpp -o $@
+build/gene-comparison: src/main.cpp src/cli.cpp src/cli.hpp src/fasta.cpp src/fasta.hpp src/report.cpp src/report.hpp src/utils.cpp src/utils.hpp src/alignment.cpp src/alignment.hpp src/multiple_alignment.cpp src/multiple_alignment.hpp | build
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) src/main.cpp src/cli.cpp src/fasta.cpp src/report.cpp src/utils.cpp src/alignment.cpp src/multiple_alignment.cpp -o $@
 
 build/test-alignment: tests/test_alignment.cpp src/alignment.cpp src/alignment.hpp src/multiple_alignment.cpp src/multiple_alignment.hpp | build
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) tests/test_alignment.cpp src/alignment.cpp src/multiple_alignment.cpp -o $@

@@ -15,7 +15,7 @@ def fasta(path: Path) -> dict[str, str]:
     records = {}
     name = None
 
-    for line in path.read_text(encoding="ascii").splitlines():
+    for line in path.read_text(encoding="utf-8").splitlines():
         if line.startswith(">"):
             name = line[1:].split()[0]
             records[name] = ""
@@ -36,7 +36,7 @@ def main() -> None:
     independent = {}
 
     for row in csv.DictReader(check.stdout.splitlines()):
-        key = (row["gene"], frozenset((row["referencia"], row["comparado"])))
+        key = (row["gene"], frozenset((row["referência"], row["comparado"])))
         independent[key] = row
 
     with tempfile.TemporaryDirectory() as temporary:
@@ -48,8 +48,8 @@ def main() -> None:
                                   "--output-dir", str(output)], cwd=ROOT,
                                  text=True, capture_output=True, check=True)
 
-            assert "unique_pairs=6" in run.stdout
-            assert "results_identical=yes" in run.stderr
+            assert "pares_únicos=6" in run.stdout
+            assert "resultados_idênticos=sim" in run.stderr
 
             pairs = tsv(output / "pairs.tsv")
             effects = tsv(output / "codon_effects.tsv")
@@ -57,17 +57,21 @@ def main() -> None:
 
             assert len(pairs) == len(effects) == 6
             assert len(summary) == 1
-            assert len({frozenset((row["assembly_1"], row["assembly_2"])) for row in pairs}) == 6
+            assert "proteína_1" in pairs[0]
+            assert "códons_sinônimos" in effects[0]
+            assert "sequências" in summary[0]
+            assert {row["parada_diferente"] for row in effects} <= {"sim", "não"}
+            assert len({frozenset((row["montagem_1"], row["montagem_2"])) for row in pairs}) == 6
 
             for row in effects:
-                key = (gene, frozenset((row["assembly_1"], row["assembly_2"])))
+                key = (gene, frozenset((row["montagem_1"], row["montagem_2"])))
 
                 if key in independent:
                     expected = independent[key]
 
-                    assert row["different_bases"] == expected["bases_diferentes"]
-                    assert row["synonymous_codons"] == expected["codons_sinonimos"]
-                    assert row["nonsynonymous_codons"] == expected["codons_nao_sinonimos"]
+                    assert row["bases_diferentes"] == expected["bases_diferentes"]
+                    assert row["códons_sinônimos"] == expected["códons_sinônimos"]
+                    assert row["códons_não_sinônimos"] == expected["códons_não_sinônimos"]
 
             protein_alignment = fasta(output / "protein_alignment.faa")
             cds_alignment = fasta(output / "cds_alignment.fna")
@@ -105,18 +109,32 @@ def main() -> None:
                                    "--output-dir", str(temporary / "cds")], cwd=ROOT,
                                   text=True, capture_output=True, check=True)
 
-        assert "gene=rpoB mode=cds" in cds_mode.stdout
+        assert "gene=rpoB modo=cds" in cds_mode.stdout
         assert len(tsv(temporary / "cds" / "pairs.tsv")) == 6
 
         invalid = subprocess.run([str(PROGRAM), "--protein", "invalid"], cwd=ROOT,
                                  text=True, capture_output=True)
 
         assert invalid.returncode != 0
+        assert "erro: --protein deve ser recA, trhO ou rpoB" in invalid.stderr
 
         invalid_threads = subprocess.run([str(PROGRAM), "--threads", "-1"], cwd=ROOT,
                                          text=True, capture_output=True)
 
         assert invalid_threads.returncode != 0
+        assert "erro: Quantidade de threads inválida: -1" in invalid_threads.stderr
+
+        overflow_threads = subprocess.run([str(PROGRAM), "--threads", "999999999999999999999999"],
+                                          cwd=ROOT, text=True, capture_output=True)
+
+        assert overflow_threads.returncode != 0
+        assert "erro: Quantidade de threads inválida" in overflow_threads.stderr
+
+        invalid_mode = subprocess.run([str(PROGRAM), "--mode", "desconhecido"],
+                                      cwd=ROOT, text=True, capture_output=True)
+
+        assert invalid_mode.returncode != 0
+        assert "erro: O modo deve ser protein ou cds" in invalid_mode.stderr
 
 
 if __name__ == "__main__":

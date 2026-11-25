@@ -2,23 +2,27 @@
 """Extrai as CDS e proteínas do painel a partir dos genomas locais."""
 
 import csv
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+
 BASES = "TCAG"
+COMPLEMENT = str.maketrans("ACGT", "TGCA")
+
 AMINO_ACIDS = (
     "FFLLSSSSYY**CC*W"
     "LLLLPPPPHHQQRRRR"
     "IIIMTTTTNNKKSSRR"
     "VVVVAAAADDEEGGGG"
 )
+
 CODON_TABLE = {
     a + b + c: amino
     for a, block in zip(BASES, range(0, 64, 16))
     for b, row in zip(BASES, range(block, block + 16, 4))
     for c, amino in zip(BASES, AMINO_ACIDS[row : row + 4])
 }
-COMPLEMENT = str.maketrans("ACGT", "TGCA")
 
 
 def load_cds(row: dict[str, str]) -> tuple[str, str]:
@@ -59,13 +63,14 @@ def load_cds(row: dict[str, str]) -> tuple[str, str]:
 
 
 def write_fasta(path: Path, header: str, sequence: str) -> None:
-    with path.open("w", encoding="ascii") as handle:
+    with path.open("w", encoding="utf-8") as handle:
         handle.write(f">{header}\n")
         for offset in range(0, len(sequence), 70):
             handle.write(sequence[offset : offset + 70] + "\n")
 
 
 def main() -> None:
+    sys.stdout.reconfigure(encoding="utf-8")
     with (ROOT / "resources" / "proteins.csv").open(newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle))
 
@@ -84,10 +89,10 @@ def main() -> None:
         out.mkdir(parents=True, exist_ok=True)
 
         location = f'{row["chromosome"]}:{row["start"]}-{row["end"]}({row["strand"]})'
-        metadata = f"assembly={assembly} gene={gene} protein_id={row['protein_id']}"
+        metadata = f"montagem={assembly} gene={gene} id_proteína={row['protein_id']}"
 
         write_fasta(out / f"{assembly}_{gene}.fna", f"{location} {metadata}", cds)
-        write_fasta(out / f"{assembly}_{gene}.faa", f"{row['protein_id']} {metadata} location={location}", protein)
+        write_fasta(out / f"{assembly}_{gene}.faa", f"{row['protein_id']} {metadata} localização={location}", protein)
 
         print(f"{gene} {assembly}: {len(cds)} bases, {len(protein)} aminoácidos")
 
@@ -96,4 +101,16 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    sys.stderr.reconfigure(encoding="utf-8")
+
+    try:
+        main()
+    except ValueError as erro:
+        print(f"erro: {erro}", file=sys.stderr)
+        raise SystemExit(1) from None
+    except KeyError as erro:
+        print(f"erro: Campo ausente nos dados: {erro.args[0]}", file=sys.stderr)
+        raise SystemExit(1) from None
+    except OSError as erro:
+        print(f"erro: Falha ao acessar o sistema de arquivos em {erro.filename} (código {erro.errno})", file=sys.stderr)
+        raise SystemExit(1) from None

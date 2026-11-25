@@ -1,0 +1,363 @@
+\documentclass[12pt]{article}
+
+% Formato de artigo da SBC fornecido em resources/template-latex.
+\usepackage{sbc-template}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx,url,amsmath}
+\sloppy
+
+\title{Comparação de genes candidatos à ortologia em quatro linhagens de \textit{Maribacter}}
+\author{Autores do projeto\inst{1}}
+\address{Instituição a informar}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+  This report compares the \textit{recA}, \textit{trhO}, and \textit{rpoB} coding
+  sequences and proteins in four \textit{Maribacter} lineages. We use global
+  pairwise protein alignment, a progressive multiple alignment, codon
+  projection, and parallel processing of six unique pairs per gene. Protein
+  identity ranges from 86.30\% to 98.11\%. The evidence supports the genes as
+  orthology candidates, but does not establish their evolutionary history.
+\end{abstract}
+
+\begin{resumo}
+  Este trabalho compara as sequências codificadoras e as proteínas de
+  \textit{recA}, \textit{trhO} e \textit{rpoB} em quatro linhagens de
+  \textit{Maribacter}. São usados alinhamento global entre pares, alinhamento
+  múltiplo progressivo, projeção de códons e processamento paralelo dos seis
+  pares únicos por gene. A identidade proteica observada varia de 86,30\% a
+  98,11\%. Os dados apoiam a hipótese de ortologia dos genes, sem demonstrar
+  definitivamente sua história evolutiva.
+\end{resumo}
+
+\section{Introdução e objetivo}
+
+O objetivo é comparar genes anotados em quatro linhagens do gênero
+\textit{Maribacter} e descrever as diferenças observadas no DNA codificador e
+nas proteínas correspondentes. O painel contém \textit{recA}, associado à
+recombinação, \textit{trhO}, anotado como hidroxilase de uridina do tRNA, e
+\textit{rpoB}, que codifica a subunidade beta da RNA polimerase. Uma CDS
+(\textit{coding sequence}) é a região de DNA que codifica um produto proteico;
+neste trabalho, cada CDS inclui o códon de parada terminal.
+
+\subsection{Premissa e alcance da ortologia}
+
+Adotou-se inicialmente, \textbf{sem uma reconstrução filogenética própria e,
+portanto, com fundamento ainda limitado}, a premissa de que as linhagens
+selecionadas compartilham um ancestral comum e seriam candidatos à ortologia. Essa foi uma hipótese de trabalho para escolher as sequências, não um resultado demonstrado. Em sentido estrito, \textbf{ortologia é uma relação entre genes de linhagens distintas que derivam
+de um gene ancestral separado por especiação}; não é uma propriedade atribuída
+a genomas inteiros. Genes semelhantes também podem ser parálogos, por exemplo
+após duplicação \cite{tatusov1997,ncbiorthology}.
+
+A avaliação posterior encontrou uma cópia anotada de cada gene por montagem,
+CDSs com tradução íntegra e idêntica à proteína RefSeq correspondente, alta
+identidade entre proteínas e vizinhança gênica conservada. Em uma triagem
+heurística por segmentos idênticos de quatro aminoácidos, a proteína esperada
+ficou em primeiro lugar nas 12 buscas direcionais entre proteomas para cada
+gene. \textit{recA} e \textit{trhO} são vizinhos nas quatro montagens; a
+vizinhança de \textit{rpoB} inclui \textit{rpoC}, \textit{rplL}, \textit{rplJ}
+e \textit{rplA}. Essas observações sustentam os três grupos como candidatos
+fortes à ortologia, mas a triagem não equivale a uma busca recíproca formal
+com BLAST nem a uma comparação entre árvores de genes e de espécies. Duplicações
+antigas seguidas de perdas ou transferência horizontal ainda são explicações
+possíveis \cite{tatusov1997,ncbiorthology}.
+
+\section{Dados e ambiente de execução}
+
+Os genomas foram obtidos do NCBI. A Tabela~\ref{tab:montagens} identifica as
+quatro montagens. Os arquivos dos genomas completos estão em:
+\begin{itemize}
+\item \path{resources/genomes/GCF_027474845.2_ASM2747484v2_genomic.fna};
+\item \path{resources/genomes/GCF_002269385.1_ASM226938v1_genomic.fna};
+\item \path{resources/genomes/GCF_001865655.1_ASM186565v1_genomic.fna};
+\item \path{resources/genomes/GCF_001913155.1_ASM191315v1_genomic.fna}.
+\end{itemize}
+Para cada gene e montagem, o projeto extraiu uma CDS e a respectiva proteína,
+usando as anotações RefSeq e os acessos registrados em
+\path{resources/proteins.csv}. As 12 CDSs começam com \texttt{ATG}, terminam
+em códon de parada, não contêm parada interna e traduzem exatamente para as
+proteínas indicadas no RefSeq. A análise lê os FASTA de CDS (\texttt{.fna}) e
+proteínas (\texttt{.faa}) em \path{resources/recA/}, \path{resources/trhO/}
+ou \path{resources/rpoB/}, conforme o gene selecionado. Por exemplo, para
+\textit{recA} da montagem \texttt{GCF\_001865655.1}, os arquivos de entrada
+são \path{resources/recA/GCF_001865655.1_recA.fna} e
+\path{resources/recA/GCF_001865655.1_recA.faa}. Os genomas completos
+\textbf{não são alinhados integralmente}.
+
+\begin{table}[ht]
+\centering\small
+\caption{Linhagens analisadas e montagens RefSeq.}
+\label{tab:montagens}
+\begin{tabular}{lll}
+\hline
+Linhagem usada no projeto & Montagem & Isolado \\
+\hline
+\textit{M. aestuarii} & \texttt{GCF\_027474845.2} & JCM18631 \\
+\textit{M. cobaltidurans} & \texttt{GCF\_002269385.1} & B1 \\
+\textit{M. dokdonensis} & \texttt{GCF\_001865655.1} & 1\_2014MBL\_MicDiv \\
+\textit{M. hydrothermalis} & \texttt{GCF\_001913155.1} & T28 \\
+\hline
+\end{tabular}
+\end{table}
+
+A denominação \textit{M. dokdonensis} para \texttt{GCF\_001865655.1} é a
+adotada no projeto e foi confirmada pelo responsável. O registro NCBI
+\texttt{NZ\_CP011318.1} apresenta a mesma linhagem como \textit{Maribacter}
+sp. 1\_2014MBL\_MicDiv \cite{ncbiassembly}.
+
+A implementação principal usa \textbf{C++17}, biblioteca padrão de C++ e
+\texttt{std::thread}; o \texttt{Makefile} compila com \texttt{g++},
+\texttt{-O2} e \texttt{-pthread}. Scripts auxiliares de extração e conferência
+usam Python 3. Como referência de execução e inspeção deste projeto, o
+ambiente é Ubuntu 22.04.5 LTS em WSL2, arquitetura x86\_64, \texttt{g++}
+11.4.0 e Python 3.10.12. Esses dados descrevem o ambiente consultado; os
+resultados numéricos deste artigo foram lidos dos arquivos gerados em
+\path{results/recA/}, \path{results/trhO/} e \path{results/rpoB/}.
+
+Na raiz do repositório, \texttt{make test} executa as verificações e
+\texttt{make} compila \texttt{build/gene-comparison}. Exemplos:
+\begin{quote}\ttfamily\small
+./build/gene-comparison --protein recA --benchmark\\
+./build/gene-comparison --protein trhO --mode cds\\
+./build/gene-comparison --protein rpoB --threads 1
+\end{quote}
+\texttt{--protein} aceita \texttt{recA}, \texttt{trhO} ou \texttt{rpoB}, com
+\texttt{recA} como padrão. \texttt{--mode protein|cds} seleciona a unidade da
+tabela impressa no terminal; os arquivos persistidos sempre contêm as duas.
+\texttt{--input} e \texttt{--output-dir} mudam os diretórios padrão.
+
+\section{Implementação dos alinhamentos}
+
+\subsection{Alinhamento global entre pares}
+
+As proteínas completas de cada gene, não os genomas completos, são alinhadas
+pelo método global de Needleman e Wunsch \cite{needleman1970}. Para sequências
+$x$ e $y$, a matriz de programação dinâmica $F$ representa a melhor pontuação
+para os prefixos $x_{1..i}$ e $y_{1..j}$:
+\begin{equation}
+F(i,j)=\max\left\{\begin{array}{l}
+F(i-1,j-1)+s(x_i,y_j),\\
+F(i-1,j)-3,\\
+F(i,j-1)-3,
+\end{array}\right.
+\qquad
+s(a,b)=\begin{cases}2,&a=b,\\-1,&a\ne b.\end{cases}
+\label{eq:nw}
+\end{equation}
+As bordas recebem penalidade de $-3$ por posição de lacuna; em empates, a
+reconstrução prioriza a diagonal. As pontuações $+2$, $-1$ e $-3$ são escolhas
+do projeto, e a lacuna usa penalidade linear. O cálculo guarda apenas duas
+linhas de pontuações, além de um byte por célula para reconstruir o caminho.
+Para comprimentos $m$ e $n$, o tempo é $O(mn)$ e a memória é $O(mn)$ por causa
+da matriz de direções. A identidade relatada é a proporção de caracteres
+idênticos nas colunas alinhadas, incluindo colunas com lacuna no denominador;
+não é uma distância evolutiva corrigida \cite{yang2006}.
+
+\subsection{Alinhamento múltiplo e códons}
+
+Após os seis alinhamentos entre pares, o programa constrói separadamente um
+alinhamento múltiplo \textbf{progressivo} das quatro proteínas, acrescentando
+as sequências em ordem lexicográfica dos acessos de montagem. A ideia geral é
+inspirada em Feng e Doolittle \cite{feng1987}, mas esta implementação não
+constrói árvore guia; portanto, o resultado pode depender da ordem de entrada.
+As colunas de aminoácidos orientam a projeção dos códons correspondentes das
+CDSs, preservando trincas e o quadro de leitura \cite{suyama2006}. O códon de
+parada é acrescentado ao fim do alinhamento de DNA e não integra o alinhamento
+proteico. Para cada par, o programa conta bases diferentes, códons diferentes
+que preservam o aminoácido e códons com aminoácidos diferentes.
+
+\subsection{Paralelismo e otimizações}
+
+Com $n=4$ sequências há $\binom{4}{2}=n(n-1)/2=6$ pares únicos: cada par
+$(i,j)$ é calculado somente quando $i<j$. Não se repete a comparação inversa
+$(j,i)$. Um contador atômico distribui esses seis trabalhos entre as threads;
+o limite é o menor entre o valor de \texttt{--threads}, a concorrência de
+hardware informada pelo sistema e o número de pares. Cada tarefa grava em
+uma posição exclusiva do vetor de resultados, preservando a ordem de saída.
+As sequências são carregadas uma vez e reutilizadas. O alinhamento múltiplo,
+a projeção e a escrita dos relatórios ocorrem após a etapa paralela.
+\texttt{--benchmark} repete apenas o alinhamento dos pares com uma thread e
+confere igualdade dos resultados; os tempos \texttt{tempo\_pares\_paralelo\_ms}
+e \texttt{tempo\_pares\_sequencial\_ms} abrangem somente essa etapa, não o fluxo
+inteiro. Não se afirma aceleração sem medição controlada.
+
+\section{Resultados}
+
+\subsection{Visão geral}
+
+A Tabela~\ref{tab:resumo} resume o alinhamento múltiplo. ``Conservadas''
+significa colunas com a mesma letra nas quatro sequências; ``substituídas''
+significa colunas sem lacuna e com pelo menos duas letras diferentes; ``com
+lacuna'' significa colunas com ao menos um hífen. As três classes esgotam o
+total de colunas em cada tipo de sequência.
+
+\begin{table}[ht]
+\centering\small
+\caption{Resumo dos alinhamentos múltiplos de quatro sequências por gene.}
+\label{tab:resumo}
+\begin{tabular}{lrrrrrrrr}
+\hline
+& \multicolumn{4}{c}{Proteína (aa)} & \multicolumn{4}{c}{CDS (bases)} \\
+Gene & Total & Cons. & Subst. & Lac. & Total & Cons. & Subst. & Lac. \\
+\hline
+\textit{recA} & 335 & 312 & 23 & 0 & 1008 & 693 & 315 & 0 \\
+\textit{trhO} & 343 & 282 & 61 & 0 & 1032 & 651 & 381 & 0 \\
+\textit{rpoB} & 1269 & 1202 & 67 & 0 & 3810 & 2815 & 995 & 0 \\
+\hline
+\end{tabular}
+\end{table}
+
+\textit{trhO} tem a maior fração de colunas proteicas com substituição
+($61/343=17{,}78\%$), seguida de \textit{recA} ($23/335=6{,}87\%$) e
+\textit{rpoB} ($67/1269=5{,}28\%$). Nenhum dos três alinhamentos tem lacunas
+nesse painel. As diferenças no DNA são mais numerosas porque códons distintos
+podem codificar o mesmo aminoácido. Essas são observações de sequências atuais,
+sem atribuição de direção histórica ou efeito funcional.
+
+\subsection{Identidades entre os seis pares}
+
+Na Tabela~\ref{tab:pares}, os rótulos abreviados são D = linhagem
+1\_2014MBL\_MicDiv, H = \textit{M. hydrothermalis}, C =
+\textit{M. cobaltidurans} e A = \textit{M. aestuarii}. Em cada célula
+``iguais/total (\%)'', o numerador conta colunas idênticas entre as duas
+sequências, o denominador conta todas as colunas alinhadas e a porcentagem é
+$100\times\mathrm{iguais}/\mathrm{total}$, arredondada a duas casas.
+
+\begin{table}[ht]
+\centering\small
+\caption{Identidade observada por gene e par único, nas proteínas e CDSs.}
+\label{tab:pares}
+\begin{tabular}{llrr}
+\hline
+Gene & Par & Proteína: iguais/total (\%) & CDS: iguais/total (\%) \\
+\hline
+\textit{recA} & D--H & 328/335 (97,91) & 868/1008 (86,11) \\
+ & D--C & 320/335 (95,52) & 803/1008 (79,66) \\
+ & D--A & 322/335 (96,12) & 795/1008 (78,87) \\
+ & H--C & 320/335 (95,52) & 803/1008 (79,66) \\
+ & H--A & 323/335 (96,42) & 809/1008 (80,26) \\
+ & C--A & 318/335 (94,93) & 786/1008 (77,98) \\
+\hline
+\textit{trhO} & D--H & 321/343 (93,59) & 855/1032 (82,85) \\
+ & D--C & 305/343 (88,92) & 789/1032 (76,45) \\
+ & D--A & 300/343 (87,46) & 787/1032 (76,26) \\
+ & H--C & 296/343 (86,30) & 763/1032 (73,93) \\
+ & H--A & 299/343 (87,17) & 799/1032 (77,42) \\
+ & C--A & 299/343 (87,17) & 782/1032 (75,78) \\
+\hline
+\textit{rpoB} & D--H & 1245/1269 (98,11) & 3357/3810 (88,11) \\
+ & D--C & 1225/1269 (96,53) & 3172/3810 (83,25) \\
+ & D--A & 1224/1269 (96,45) & 3213/3810 (84,33) \\
+ & H--C & 1224/1269 (96,45) & 3155/3810 (82,81) \\
+ & H--A & 1224/1269 (96,45) & 3175/3810 (83,33) \\
+ & C--A & 1234/1269 (97,24) & 3191/3810 (83,75) \\
+\hline
+\end{tabular}
+\end{table}
+
+Em todos os pares, a porcentagem de identidade da proteína supera a da CDS.
+A comparação \textit{recA} D--A ilustra a distinção: há 213 bases diferentes
+em códons codificadores alinhados, 173 posições de códons diferentes sem troca
+de aminoácido e 13 posições com troca de aminoácido. Os números usam unidades
+distintas: uma posição de códon pode conter duas ou três bases diferentes.
+Por exemplo, \texttt{AGC} $\rightarrow$ \texttt{AGT} preserva serina;
+\texttt{GAC} $\rightarrow$ \texttt{GAA} troca aspartato por glutamato. Em
+\textit{trhO}, \texttt{AAA} $\rightarrow$ \texttt{ATA} troca lisina por
+isoleucina. São diferenças entre sequências presentes, não mutações
+historicamente localizadas \cite{yang2006,zhang1997}.
+
+\subsection{Como ler cada arquivo e campo de saída}
+
+O programa grava um diretório \texttt{results/<gene>/} para cada execução.
+\texttt{protein\_alignment.faa} contém quatro linhas FASTA de proteínas
+alinhadas; \texttt{cds\_alignment.fna} contém as quatro CDSs alinhadas por
+códons. Cada cabeçalho FASTA identifica montagem, acesso de sequência e gene.
+O caractere \texttt{-} representa lacuna. Como as CDSs incluem o códon de
+parada, o alinhamento de DNA tem três colunas finais além de três colunas
+por aminoácido.
+
+\noindent\textbf{\texttt{pairs.tsv}.} Cada linha representa um dos seis pares
+únicos do gene. \texttt{montagem\_1} e \texttt{montagem\_2} são os acessos
+das montagens; \texttt{proteína\_1} e \texttt{proteína\_2} são os acessos
+RefSeq das proteínas comparadas. \texttt{coincidências\_proteína} conta posições
+com o mesmo aminoácido nos dois lados; \texttt{colunas\_proteína} é o número
+total de colunas do alinhamento do par; \texttt{identidade\_proteína\_percentual}
+é $100\times\texttt{coincidências\_proteína}/\texttt{colunas\_proteína}$;
+\texttt{lacunas\_proteína} conta colunas com hífen em pelo menos um lado.
+\texttt{coincidências\_cds}, \texttt{colunas\_cds},
+\texttt{identidade\_cds\_percentual} e \texttt{lacunas\_cds} são as quatro medidas
+análogas para bases, após projetar o alinhamento proteico sobre as CDSs. A
+identidade da CDS inclui o códon de parada; a identidade proteica não.
+Por exemplo, \textit{recA} D--H apresenta 328 aminoácidos idênticos em 335
+colunas (97,91\%) e 868 bases idênticas em 1008 colunas (86,11\%), sem
+lacunas.
+
+\noindent\textbf{\texttt{codon\_effects.tsv}.} \texttt{montagem\_1} e
+\texttt{montagem\_2} identificam o mesmo par de montagens. O campo
+\texttt{bases\_diferentes} conta bases diferentes em posições codificadoras
+nas quais os dois códons estão presentes; exclui o códon de parada e posições
+com lacuna. \texttt{códons\_sinônimos} conta posições cujo códon difere,
+mas cujo aminoácido é igual. \texttt{códons\_não\_sinônimos} conta posições
+com aminoácidos diferentes. \texttt{códons\_com\_lacuna} conta posições de códon
+com lacuna em uma das sequências. \texttt{parada\_diferente} vale
+\texttt{sim} quando os tripletos terminais de parada diferem, mesmo que
+ambos interrompam a tradução; \texttt{não} indica tripletos iguais. As
+contagens sinônimas e não sinônimas são de \emph{posições de códon}, não de
+bases ou de eventos evolutivos. Elas não são estimativas de $d_N$, $d_S$ ou
+$d_N/d_S$.
+
+\noindent\textbf{\texttt{summary.tsv}.} Há uma linha por gene.
+\texttt{gene} identifica \textit{recA}, \textit{trhO} ou \textit{rpoB};
+\texttt{sequências} é a quantidade de sequências no alinhamento múltiplo
+(quatro neste estudo). \texttt{colunas\_proteína} e \texttt{colunas\_cds}
+são os comprimentos do alinhamento múltiplo em aminoácidos e bases,
+respectivamente. \texttt{proteína\_conservada} e \texttt{cds\_conservada}
+contam colunas iguais nas quatro linhas; \texttt{proteína\_substituída} e
+\texttt{cds\_substituída} contam colunas sem lacunas, mas com ao menos uma
+diferença; \texttt{proteína\_com\_lacuna} e \texttt{cds\_com\_lacuna} contam
+colunas com pelo menos uma lacuna. Essas medidas vêm do alinhamento
+\emph{múltiplo}; não devem ser confundidas com as medidas por par de
+\texttt{pairs.tsv}.
+
+O terminal ainda mostra \texttt{gene}, \texttt{modo}, \texttt{sequências},
+\texttt{pares\_únicos}, \texttt{threads} e \texttt{diretório\_resultados}: gene
+selecionado, unidade exibida, número de sequências, pares calculados, threads
+usadas e diretório dos arquivos. Na tabela do terminal, \texttt{acesso\_1}
+e \texttt{acesso\_2} são os acessos FASTA correspondentes ao modo;
+\texttt{coincidências}, \texttt{colunas}, \texttt{identidade\_percentual} e
+\texttt{lacunas} seguem as mesmas definições por par. \texttt{pontuação} é a soma
+das pontuações $+2/-1/-3$ no alinhamento exibido e depende do modo;
+\texttt{bases\_diferentes}, \texttt{códons\_sinônimos},
+\texttt{códons\_não\_sinônimos} e \texttt{códons\_com\_lacuna} mantêm as definições
+acima. \texttt{colunas\_alinhamento\_múltiplo}, \texttt{conservadas},
+\texttt{substituídas} e \texttt{com\_lacuna} no terminal resumem sempre o
+alinhamento múltiplo de \emph{proteínas}. Se solicitado \texttt{--benchmark},
+\texttt{resultados\_idênticos=sim} informa que os alinhamentos dos pares com
+uma thread e com múltiplas threads coincidiram.
+
+\section{Discussão, limitações e conclusão}
+
+As altas identidades, a cópia anotada única, a tradução íntegra e a sintenia
+conservada apoiam a seleção de \textit{recA}, \textit{trhO} e \textit{rpoB}
+como candidatos à ortologia nas quatro linhagens. A premissa inicial de
+ancestralidade comum motivou a comparação, mas não substitui uma análise
+filogenética. A porcentagem de identidade é uma medida descritiva e pode
+subestimar a quantidade de substituições históricas \cite{yang2006}.
+Similarmente, diferenças sinônimas e não sinônimas não revelam por si só a
+linhagem em que ocorreram, convergência, seleção ou mudança funcional;
+inferências desse tipo exigiriam filogenia e reconstrução ancestral
+\cite{zhang1997}.
+
+O estudo entrega seis comparações globais por gene, alinhamentos múltiplos
+das proteínas, alinhamentos de CDS orientados por códons e tabelas que
+separam identidade de proteínas, identidade de DNA e efeitos observados
+por códon. Uma continuação apropriada é comparar árvores gênicas com uma
+árvore de espécies e ampliar a amostragem de linhagens antes de afirmar
+ortologia definitiva ou interpretar mecanismos evolutivos.
+
+\bibliographystyle{sbc}
+\bibliography{referencias}
+\end{document}
