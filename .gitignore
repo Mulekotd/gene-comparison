@@ -1,5 +1,12 @@
 # remove o template padrão de artigo
 /resources/template-latex
 
-# remove pdfs
-**/*.pdf
+# arquivos de compilação
+/build/
+
+# cache do Python
+__pycache__/
+*.pyc
+
+# resultados
+results/

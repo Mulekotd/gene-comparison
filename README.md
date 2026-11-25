@@ -1,6 +1,6 @@
 # Comparação de um gene em quatro espécies de _Maribacter_
 
-Projeto de bioinformática do tema 4: comparar um gene ortólogo em quatro espécies do mesmo gênero e avaliar diferenças nas sequências de DNA e nas proteínas correspondentes. A entrega será o código em C++ e um relatório em formato de artigo, conforme [o modelo SBC](docs/template-latex/sbc-template.tex).
+Projeto de bioinformática do tema 4: comparar um gene ortólogo em quatro espécies do mesmo gênero e avaliar diferenças nas sequências de DNA e nas proteínas correspondentes. A entrega será o código em C++ e um relatório em formato de artigo, conforme o modelo SBC indicado pela professora.
 
 ## Espécies escolhidas
 
@@ -13,12 +13,33 @@ Selecionamos uma linhagem por espécie a partir de [docs/samples.csv](docs/sampl
 | _M. dokdonensis_    | `GCF_001865655.1` | 1_2014MBL_MicDiv |     99,99% |        0,02% |
 | _M. hydrothermalis_ | `GCF_001913155.1` | T28              |     99,99% |        0,27% |
 
-A planilha contém apenas metadados. A [avaliação de ortologia de `recA`](docs/ortologia-reca.md) foi registrada separadamente; as sequências de entrada ainda precisam ser reunidas em FASTA.
+A planilha contém apenas metadados. A [avaliação de ortologia dos três genes](docs/ortologia.md) foi registrada separadamente; os FASTA das CDS e proteínas analisadas estão em `resources/<gene>/`.
 
 ## Gene e dados
 
 O **gene escolhido é `recA`**, envolvido na recombinação e no reparo do DNA. Sua CDS tem tamanho adequado para iniciar o alinhamento por programação dinâmica. A avaliação das quatro linhagens encontrou uma CDS íntegra e uma cópia correspondente em cada montagem.
 
-Para cada linhagem, extrair a CDS e a proteína de `recA` em **FASTA** a partir do registro do genoma no [NCBI Nucleotide](https://www.ncbi.nlm.nih.gov/nuccore/). FASTA será o formato de entrada do programa. Os acessos, as posições, as orientações e a verificação das traduções estão na [avaliação de ortologia](docs/ortologia-reca.md).
+As CDS e proteínas foram extraídas em **FASTA** dos genomas obtidos no [NCBI Nucleotide](https://www.ncbi.nlm.nih.gov/nuccore/). FASTA é o formato de entrada do programa. Os acessos, as posições, as orientações e a verificação das traduções estão na [avaliação de ortologia](docs/ortologia.md) e em [proteins.csv](resources/proteins.csv).
 
 As próximas tarefas estão em [docs/desenvolvimento.md](docs/desenvolvimento.md).
+
+As passagens dos PDFs usados para orientar a interpretação e as fontes dos algoritmos estão em [docs/referencias-metodos.md](docs/referencias-metodos.md).
+
+Um [painel inicial de proteínas](docs/proteinas.md) compara `recA`, `trhO` e `rpoB` nas quatro linhagens e mostra quais diferenças de códons preservam ou alteram os aminoácidos.
+
+## Executar a análise
+
+Os FASTA de `recA`, `trhO` e `rpoB` estão em `resources/<gene>/`. Eles podem ser recriados a partir dos genomas locais e das coordenadas em [proteins.csv](resources/proteins.csv):
+
+```sh
+python3 scripts/extract_proteins.py
+
+make test
+make
+
+./build/gene-comparison --protein recA --benchmark
+./build/gene-comparison --protein trhO --benchmark
+./build/gene-comparison --protein rpoB --mode cds --benchmark
+```
+
+`--protein` é opcional e usa `recA` por padrão. O programa compara somente os seis pares únicos de cada gene em threads e constrói um alinhamento múltiplo progressivo das quatro proteínas. No modo `cds`, o alinhamento das proteínas orienta a projeção dos códons, preservando o quadro de leitura. `--threads N` limita a quantidade de threads; `--benchmark` também executa os pares sequencialmente e confere se os resultados são idênticos. Os arquivos gerados ficam em `results/<gene>/`: alinhamentos FASTA, tabela de pares, efeitos por códon e resumo de colunas. A [interpretação inicial](docs/resultados.md) reúne os três genes.

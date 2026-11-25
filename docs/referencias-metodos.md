@@ -1,0 +1,21 @@
+# Referências e decisões de método
+
+Conferimos as três obras antes de relacioná-las ao código. As páginas abaixo são as páginas **impressas nos trabalhos**; o número da página exibido por um leitor digital pode ser diferente.
+
+| Referência disponível no projeto                                                                                                                                | Trecho consultado                                                                                                                              | Relação com a análise                                                                                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Tatusov, Koonin e Lipman, _A Genomic Perspective on Protein Families_](https://pubmed.ncbi.nlm.nih.gov/9381173/) (1997)                                        | pp. 631–633: grupos de proteínas ortólogas são formados por padrões de similaridade entre genomas; parálogos podem complicar a atribuição.     | Fundamenta a comparação de genes correspondentes entre linhagens e a cautela em tratar a ortologia como inferência apoiada por várias evidências. Veja a [avaliação dos três genes](ortologia.md). |
+| [Yang, _Computational Molecular Evolution_](https://academic.oup.com/book/34842) (2006), cap. 1                                                                 | pp. 3–4: a proporção observada de posições diferentes é uma medida simples e pode subestimar o número histórico de substituições.              | `identity_percent()` e as contagens de bases mostram similaridade observada; o programa **não** estima distância evolutiva corrigida nem número de eventos históricos.                                                  |
+| [Zhang e Kumar, _Detection of Convergent and Parallel Evolution at the Amino Acid Sequence Level_](https://academic.oup.com/mbe/article/14/5/527/994974) (1997) | pp. 527–528: investigar convergência ou paralelismo requer relações filogenéticas e inferência de estados ancestrais, além de avaliar o acaso. | `compare_codons()` relata diferenças sinônimas e não sinônimas entre sequências atuais; esses números não demonstram convergência, seleção ou mudança de função.                                                        |
+
+As três obras acima **não descrevem** diretamente os procedimentos de alinhamento implementados. Para identificá-los corretamente no código, consultamos as publicações originais:
+
+- [Needleman e Wunsch (1970)](https://pubmed.ncbi.nlm.nih.gov/5420325/): alinhamento global de duas sequências em `align_global()`.
+- [Feng e Doolittle (1987)](https://pubmed.ncbi.nlm.nih.gov/3118049/): ideia de construção progressiva do alinhamento múltiplo em `align_progressively()`. Nossa ordem de inclusão é a dos acessos, sem árvore guia filogenética.
+- [Suyama, Torrents e Bork (2006)](https://pubmed.ncbi.nlm.nih.gov/16845082/): projeção de um alinhamento de proteínas sobre as CDS correspondentes em `project_codons()` e `project_multiple_codons()`. Nosso código pressupõe CDS íntegras e tradução validada; não implementa todas as tolerâncias do PAL2NAL.
+
+A pontuação `+2` para coincidência, `−1` para substituição e `−3` para lacuna, o uso de threads e a matriz de scores com duas linhas são escolhas deste projeto. Elas não foram atribuídas às obras citadas. Os alinhamentos e contagens estão em [resultados.md](resultados.md).
+
+## Para as próximas alterações
+
+Antes de mudar o método ou interpretar novos resultados, conferir novamente as referências citadas. Registrar a página que sustenta cada afirmação e citar a fonte perto do código ou no documento de resultados. Quando a fonte não cobrir uma escolha técnica, identificá-la como decisão do projeto ou buscar uma referência específica.
